@@ -1,0 +1,17 @@
+- name: Variables Priority
+  hosts: localhost
+  connection: local
+  vars:
+    my_name: "John Wick from playbook"
+  vars_files:
+    - variables.yml
+  vars_prompt:
+    - name: my_name
+      prompt: "Enter your name"
+      private: no
+  tasks:
+    - name: Show variable value
+      vars:
+        my_name: "John Wick from task"
+      debug:
+        msg: "{{ my_name }}"

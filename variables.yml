@@ -1,2 +1,2 @@
 #variables to access from playbook
-name: "John Wick from variables.yml"
+my_name: "John Wick from variables.yml"
