@@ -19,10 +19,10 @@
     - name: Printing Variables
       debug:
         msg: |
-          name: {{name}}
-          age: {{age}}
-          height: {{height}}
-          is_married: {{is_married}}
+          name: {{ name }}
+          age: {{ age }}
+          height: {{ height }}
+          is_married: {{ is_married }}
           spouse: {{ spouse }}
-          skills: {{skills}}
-          address: {{address}}
+          skills: {{ skills[0] }}
+          address: {{ address.city }}

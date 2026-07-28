@@ -15,12 +15,12 @@
       #   my_name: "John Wick from task"
       debug:
         msg: "{{ my_name }}"
-#=======================================
+#==========================
 # Variable Priority Order:
-#=======================================
-# 1. Command line variables (highest priority)
+#==========================
+# 1. Command line args (-e)
 # 2. Task-level variables
-# 3. File-level variables (from vars_files)
-# 4. Prompted variables (from vars_prompt)
+# 3. vars_files
+# 4. vars_prompt
 # 5. Playbook-level variables
-# 6. Inventory variables (lowest priority)
+# 6. Inventory / group_vars
