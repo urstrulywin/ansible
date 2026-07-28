@@ -1,0 +1,7 @@
+- name: Variables from Command Line
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Show variable value from command line
+      debug:
+        msg: "{{ msg }}" # msg is a variable passed from the command line using the -e option.
