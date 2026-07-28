@@ -1,0 +1,10 @@
+- name: Variable Test
+  hosts: localhost
+  vars:
+    name: "John Wick"
+  tasks:
+    - name: Show variable value
+      vars:
+        welcome_message: "Welcome, {{ name }}!"
+      debug:
+        msg: "Name: {{ name }}, Message: {{ welcome_message }}" # welcome_message is a user-defined variable that can be set in the inventory or playbook.
