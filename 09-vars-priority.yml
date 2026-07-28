@@ -1,8 +1,8 @@
 - name: Variables Priority
   hosts: localhost
   connection: local
-  vars:
-    my_name: "John Wick from playbook"
+  # vars:
+  #   my_name: "John Wick from playbook"
   # vars_files:
   #   - variables.yml
   # vars_prompt:
@@ -22,3 +22,4 @@
 # 2. Task-level variables
 # 3. File-level variables (from vars_files)
 # 4. Prompted variables (from vars_prompt)
+# 5. Playbook-level variables
