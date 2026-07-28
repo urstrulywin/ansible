@@ -1,0 +1,15 @@
+- name: Conditions
+  host: localhost
+  connection: local
+  vars:
+    num: 54
+  tasks:
+    - name: Is Even
+      debug:
+        msg: "{{ num }} is Even"
+      when: num%2 == 0
+
+    - when: num%2 ==1
+      debug:
+        msg: "{{ num }} is Odd"
+      name: Is Odd
