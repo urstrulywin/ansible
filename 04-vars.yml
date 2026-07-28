@@ -1,5 +1,6 @@
 - name: Variable Test
   hosts: localhost
+  connection: local # skips the SSH connection (which require credentials) and runs the playbook on the local machine.
   vars:
     name: "John Wick"
   tasks:
