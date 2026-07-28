@@ -1,0 +1,15 @@
+- name: Variables by prompting
+  hosts: localhost
+  connection: local
+  vars_prompt:
+    - username:
+      prompt: "Enter your username"
+      private: no
+    - password:
+      prompt: "Enter your password"
+      private: yes
+      confirm: yes
+  -tasks:
+    name: Printing Credentials
+    debug:
+      msg: "Username: {{ username }}, Password: {{ password }}" # username and password are variables prompted from the user during playbook execution.
