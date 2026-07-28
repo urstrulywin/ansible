@@ -4,4 +4,4 @@
   tasks:
     - name: Show variable value from inventory
       debug:
-        msg: "{{ uname }}" # uname is a variable defined in the inventory file.
+        msg: "uname:{{ uname }} \n my_name: {{my_name}}" # uname is a variable defined in the inventory file.
