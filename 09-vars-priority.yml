@@ -23,3 +23,4 @@
 # 3. File-level variables (from vars_files)
 # 4. Prompted variables (from vars_prompt)
 # 5. Playbook-level variables
+# 6. Inventory variables (lowest priority)
