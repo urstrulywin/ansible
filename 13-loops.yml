@@ -5,8 +5,8 @@
   tasks:
     - name: Installing using Loops
       package:
-        name: { { item.name } }
-        state: { { item.state } }
+        name: "{ { item.name } }"
+        state: "{ { item.state } }"
       loop:
         - { name: "nginx", state: "absent" }
         - { name: "git", state: "absent" }
