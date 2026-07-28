@@ -1,0 +1,12 @@
+- name: Loop
+  hosts: localhost
+  connection: local
+  become: yes # becomes root user
+  tasks:
+    - name: Installing using a loop
+      package:
+        name: { { item } }
+        state: present
+      loop:
+        - nginx
+        - git

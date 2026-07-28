@@ -1,0 +1,15 @@
+- name: Loops Book
+  hosts: localhost
+  connection: local
+  become: yes # becomes root user
+  tasks:
+    - name: Installing using Loops
+      package:
+        name: { { item.name } }
+        state: { { item.state } }
+      loop:
+        - { name: "nginx", state: "absent" }
+        - { name: "git", state: "absent" }
+        - { name: "tree", state: "present" }
+        - { name: "wget", state: "present" }
+        - { name: "zip", state: "present" }
