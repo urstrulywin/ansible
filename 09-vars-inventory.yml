@@ -1,7 +1,11 @@
 - name: Variables from Inventory
-  hosts: localhost
-  connection: local
+  hosts: frontend
+  # connection: local
   tasks:
     - name: Show variable value from inventory
       debug:
         msg: "uname:{{ uname }} \n my_name: {{my_name}}" # uname and my_name are defined in inventory or group_vars
+
+# Inventory Variables Priority:
+# 1. host_vars
+# 2. group_vars
