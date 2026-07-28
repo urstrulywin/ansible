@@ -4,9 +4,9 @@
   vars:
     name: "John Wick" # String
     age: 45 # Integer
-    height: 6.1 # F
-    is_married: false # Boolean Yes and No or True or False
-    spouse: null
+    height: 6.1 # Float
+    is_married: no # Boolean Yes and No or True or False
+    spouse: # null value
     skills:
       - Python
       - Ansible
