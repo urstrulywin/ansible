@@ -11,7 +11,12 @@
       private: no
   tasks:
     - name: Show variable value
-      vars:
-        my_name: "John Wick from task"
+      # vars:
+      #   my_name: "John Wick from task"
       debug:
         msg: "{{ my_name }}"
+#=======================================
+# Variable Priority Order:
+#=======================================
+# 1. Command line variables (highest priority)
+# 2. Task-level variables
