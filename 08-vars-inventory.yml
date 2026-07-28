@@ -1,0 +1,7 @@
+- name: Variables from Inventory
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Show variable value from inventory
+      debug:
+        msg: "{{ uname }}" # uname is a variable defined in the inventory file.
