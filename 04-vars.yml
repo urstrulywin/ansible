@@ -1,11 +1,28 @@
-- name: Variable Test
+- name: Variables
   hosts: localhost
   connection: local # skips the SSH connection (which require credentials) and runs the playbook on the local machine.
   vars:
-    name: "John Wick"
+    name: "John Wick" # String
+    age: 45 # Integer
+    height: 6.1 # F
+    is_married: false # Boolean Yes and No or True or False
+    spouse: null
+    skills:
+      - Python
+      - Ansible
+      - Linux # List
+    address:
+      street: "123 Main St"
+      city: "New York"
+      state: "NY" # Dictionary (Map)
   tasks:
-    - name: Show variable value
-      vars:
-        welcome_message: "Welcome, {{ name }}!"
+    - name: Printing Variables
       debug:
-        msg: "Name: {{ name }}, Message: {{ welcome_message }}" # welcome_message is a user-defined variable that can be set in the inventory or playbook.
+        msg: |
+          name: {{name}}
+          age: {{age}}
+          height: {{height}}
+          is_married: {{is_married}}
+          spouse: {{ spouse }}
+          skills: {{skills}}
+          address: {{address}}
