@@ -1,0 +1,9 @@
+- name: Variables from file
+  hosts: local
+  connection: local
+  vars_files:
+    - variables.yml
+  tasks:
+    - name: Show variable value from file
+      debug:
+        msg: "{{ name }}" # name is a variable defined in the variables.yml file.
