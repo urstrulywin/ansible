@@ -1,6 +1,6 @@
 - name: Debug Test
   hosts: frontend
   tasks:
-    - name: Debug all hosts
+    - name: Debug frontend hosts
       debug:
-        msg: "Debugging host {{ inventory_hostname }}"
+        msg: "Debugging host {{ inventory_hostname }}" # inventory_hostname is a built-in variable that represents the name of the current host being processed in the playbook.
