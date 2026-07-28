@@ -2,10 +2,10 @@
   hosts: localhost
   connection: local
   vars_prompt:
-    - username:
+    - name: username
       prompt: "Enter your username"
       private: no
-    - password:
+    - name: password
       prompt: "Enter your password"
       private: yes
       confirm: yes
