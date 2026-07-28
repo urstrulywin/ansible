@@ -1,0 +1,6 @@
+- name: Debug Test
+  hosts: frontend
+  tasks:
+    - name: Debug all hosts
+      debug:
+        msg: "Debugging host {{ inventory_hostname }}"
