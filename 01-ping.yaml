@@ -1,4 +1,4 @@
--name: Ping Test
+- name: Ping Test
   hosts: frontend
   tasks:
     - name: Ping all hosts
