@@ -1,0 +1,47 @@
+- name: Ansible filters
+  hosts: localhost
+
+  vars:
+    string: This is a String
+    list:
+      - name: Ansible
+        role: configure
+      - name: Admin
+        role: Administrator
+    map:
+      name: Student
+      role: Learner
+    ip_address: 169.254.169.254
+
+  tasks:
+    - name: Set default value
+      debug:
+        msg: "{{greeting | default('Welcome!')}}"
+
+    - name: Check if IP_V4 is valid
+      debug:
+        msg: "{{ip_address | ansible.utils.ipv4}}"
+
+    - name: Map -> List
+      debug:
+        msg: "Map is {{ map | dist2items }}"
+
+    - name: List -> Map
+      debug:
+        msg: "List is {{ list | items2dist }}"
+
+    - name: List -> String
+      debug:
+        msg: "List is {{ list | join(',') }}"
+
+    - name: String -> List
+      debug:
+        msg: "String is {{ string | split(' ') }}"
+
+    - name: String to UPPERCASE
+      debug:
+        msg: "{{string | upper}}"
+
+    - name: String to lowercase
+      debug:
+        msg: "{{string | lower}}"
