@@ -5,10 +5,10 @@
   vars:
     string: This is a String
     list:
-      - name: Ansible
-        role: configure
-      - name: Admin
-        role: Administrator
+      - key: Ansible
+        value: configure
+      - key: Admin
+        value: Administrator
     map:
       name: Student
       role: Learner
