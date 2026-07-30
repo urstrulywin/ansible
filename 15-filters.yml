@@ -21,15 +21,15 @@
 
     - name: Check if IP_V4 is valid
       debug:
-        msg: "{{ip_address | ansible.utils.ipv4}}"
+        msg: "{{ip_address is ansible.utils.ipv4}}"
 
     - name: Map -> List
       debug:
-        msg: "Map is {{ map | dist2items }}"
+        msg: "Map is {{ map | dict2items }}"
 
     - name: List -> Map
       debug:
-        msg: "List is {{ list | items2dist }}"
+        msg: "List is {{ list | items2dict }}"
 
     - name: List -> String
       debug:
