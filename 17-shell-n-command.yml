@@ -9,4 +9,4 @@
       shell: ls -ltr > /tmp/files.txt
 
     - name: simple command — no pipe needed
-      command: id roboshop
+      command: id ec2-user
