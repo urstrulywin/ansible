@@ -1,0 +1,12 @@
+- name: Using Tags
+  hosts: localhost
+  tasks:
+    - name: Printing
+      debug:
+        msg: Printing Devops
+      tags: devops
+
+    - name: Printing
+      debug:
+        msg: Printing AWS
+      tags: aws
