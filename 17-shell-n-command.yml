@@ -1,0 +1,12 @@
+- name: Shell vs Command
+  hosts: localhost
+
+  tasks:
+    - name: needs pipe — use shell
+      shell: cat /etc/passwd | grep root
+
+    - name: redirect output to file
+      shell: ls -ltr > /tmp/files.txt
+
+    - name: simple command — no pipe needed
+      command: id roboshop
