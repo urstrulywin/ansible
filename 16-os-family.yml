@@ -1,0 +1,12 @@
+- name: Find OS and Package Manager
+  hosts: localhost
+  tasks:
+    - name: RedHat family
+      debug:
+        msg: "OS is RedHat and Package manager is dnf"
+      when: ansible_facts.os_family == "RedHat"
+
+    - name: Debian family
+      debug:
+        msg: "OS is Debian and Package manager is apt-get"
+      when: ansible_facts.os_family == "Debian"
