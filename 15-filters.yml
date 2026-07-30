@@ -11,16 +11,11 @@
     map:
       name: Student
       role: Learner
-    ip_address: 169.254.169.254
 
   tasks:
     - name: Set default value
       debug:
         msg: "{{greeting | default('Welcome!')}}"
-
-    - name: Check if IP_V4 is valid
-      debug:
-        msg: "{{ip_address | ansible.utils.ipv4}}"
 
     - name: Map -> List
       debug:
